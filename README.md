@@ -22,3 +22,5 @@ The idea here is to create burnup charts using machine learning to help pick you
 As with all machine learning tools, the more data that can be fed to this the better.
 
 See here for a more detailed explaination for what a burnup chart is http://www.clariostechnology.com/productivity/blog/whatisaburnupchart
+
+Notes this assumes that only a single person is working on the project. It is a bit dumb in that it assumes velocity will be constatnt. This could be resolved with some kind of neural network I guess..... (prototype 2 maybe?)

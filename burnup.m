@@ -32,3 +32,9 @@ computeCost(X, y, theta)
 
 % use the normal equation
 theta = normalEqn(X, y)
+
+% plot the linear fit
+hold on;
+plot(X(:,2), X*theta, '-') 
+legend('Training data', 'Linear regression') 
+hold off;

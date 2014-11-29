@@ -19,3 +19,16 @@ X = data(:, 1);
 y = data(:, 2);
 
 plotData(X, y);
+
+% OK, so remember to add a column of 1s
+m = length(y);
+X = [ones(m, 1), data(:, 1)];
+
+% init theta
+theta = zeros(2, 1);
+
+% compute the initial cost
+computeCost(X, y, theta)
+
+% use the normal equation
+theta = normalEqn(X, y)

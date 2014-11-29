@@ -8,3 +8,14 @@
 
 # then, given a whole project, find the quickest period of time the
 # project can be completed.
+
+% clear any existing bits and bobs
+clear ; close all ; clc
+
+% load the training set
+data = load('trainingSet1.txt');
+
+X = data(:, 1);
+y = data(:, 2);
+
+plotData(X, y);

@@ -111,4 +111,20 @@ xlabel('Story points');
 ylabel('Time taken in mins');
 title (sprintf('Polynomial Regression Fit (lambda = %f)', lambda));
 
+fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
+
+% work out the poly value
+points = load('nextProject.txt');
+points_poly = polyFeatures(points, p);
+[points_poly, mu, sigma] = featureNormalize(points_poly);
+
+number_points = length(points);
+
+points_poly = [ones(number_points, 1), points_poly];
+
+total_mins = sum(points_poly * theta);
+
+total = total_mins / mins_in_day;
+
+fprintf('Projected total time via poly: %d person days\n', total);

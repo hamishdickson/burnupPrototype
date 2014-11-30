@@ -1,4 +1,4 @@
-function [theta] = trainLinearReg(X, y, lambda)
+function [theta] = trainLinearRegression(X, y, lambda)
 
 % Initialize Theta
 initial_theta = zeros(size(X, 2), 1);

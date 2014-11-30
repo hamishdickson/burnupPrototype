@@ -1,7 +1,16 @@
 % Burnup prototype
 
 %
-% note, this is a prototype
+% NOTE this is a prototype
+%
+
+%
+% Instructions
+%
+% First, replace the file trainingSet.txt with information about your team.
+% The more data the better really.
+% Replace the file nextProject.txt with your next project. This should be a
+% vector of story points
 %
 
 % clear any existing bits and bobs
@@ -9,7 +18,7 @@ clear ; close all ; clc
 
 %-------------------------------------------------------------------------------
 % load the training set
-data = load('trainingSet1.txt');
+data = load('trainingSet.txt');
 
 X = data(:, 2);
 y = data(:, 1);

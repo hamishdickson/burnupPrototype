@@ -78,3 +78,32 @@ total_mins = sum(Points * theta);
 total = total_mins / mins_in_day;
 
 fprintf('Projected total time: %d person days\n', total);
+
+fprintf('\nProgram paused. Press enter to continue.\n');
+pause;
+%-------------------------------------------------------------------------------
+% linear regression can only really get you so far, try using a polynomial set
+% of features
+
+p = 8;
+
+% Map X onto Polynomial Features and Normalize
+X_poly = polyFeatures(data(:, 2), p);
+[X_poly, mu, sigma] = featureNormalize(X_poly);  % Normalize
+X_poly = [ones(m, 1), X_poly];                   % Add Ones
+
+fprintf('Normalized Training Example:\n');
+fprintf('  %f  \n', X_poly(1, :));
+
+fprintf('\nProgram paused. Press enter to continue.\n');
+pause;
+
+lambda = 0;
+[theta] = trainLinearRegression(X_poly, y, lambda);
+
+% plot the linear fit
+hold on;
+plot(X_poly(:,2), X_poly*theta, '-')
+legend('Training data', 'Linear regression')
+hold off;
+pause;

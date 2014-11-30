@@ -75,4 +75,6 @@ Points = [ones(number_points, 1), points];
 
 total_mins = sum(Points * theta);
 
-total = total_mins / mins_in_day
+total = total_mins / mins_in_day;
+
+fprintf('Projected total time: %d person days\n', total);

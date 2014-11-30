@@ -10,7 +10,7 @@
 % First, replace the file trainingSet.txt with information about your team.
 % The more data the better really.
 % Replace the file nextProject.txt with your next project. This should be a
-% vector of story points
+% vector of story points. This does not have to be ordered.
 %
 
 % clear any existing bits and bobs

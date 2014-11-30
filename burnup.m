@@ -85,7 +85,11 @@ pause;
 % linear regression can only really get you so far, try using a polynomial set
 % of features
 
+% vary this to get more interesting graphs
 p = 8;
+
+% dial this up to stop overfitting
+lambda = 1;
 
 % Map X onto Polynomial Features and Normalize
 X_poly = polyFeatures(data(:, 2), p);
@@ -98,12 +102,13 @@ fprintf('  %f  \n', X_poly(1, :));
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
-lambda = 0;
 [theta] = trainLinearRegression(X_poly, y, lambda);
 
-% plot the linear fit
-hold on;
-plot(X_poly(:,2), X_poly*theta, '-')
-legend('Training data', 'Linear regression')
-hold off;
+figure(1);
+plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
+plotFit(min(X), max(X), mu, sigma, theta, p);
+xlabel('Story points');
+ylabel('Time taken in mins');
+title (sprintf('Polynomial Regression Fit (lambda = %f)', lambda));
+
 pause;

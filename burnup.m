@@ -1,13 +1,4 @@
-# Burnup prototype
-
-#TODO .... write this sucker
-
-# first, use just story points vs time taken for each person - then
-# create a graph displaying these for X people, using different colors
-# to show who is who.
-
-# then, given a whole project, find the quickest period of time the
-# project can be completed.
+% Burnup prototype
 
 % clear any existing bits and bobs
 clear ; close all ; clc
@@ -20,6 +11,7 @@ y = data(:, 1);
 
 % don't need this yet, but will need it for multiple features
 %[X, mu, sigma] = featureNormalize(X);
+%X_poly = polyFeatures(X, 5);
 
 plotData(X, y);
 

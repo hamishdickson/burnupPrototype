@@ -10,9 +10,17 @@ Features
 
 This prototype initially is just using time billed against time of billing.
 
-ie X = [time_billed; time_of_billing]
+ie X = [time_billed]
 
 and y = [time_of_completion]
+
+![alt tag](https://github.com/hamishdickson/burnupPrototype/blob/master/screen-shots/console-output.png)
+
+
+![alt tag](https://github.com/hamishdickson/burnupPrototype/blob/master/screen-shots/linear-fit.png)
+
+
+![alt tag](https://github.com/hamishdickson/burnupPrototype/blob/master/screen-shots/poly-fit.png)
 
 Details
 =======

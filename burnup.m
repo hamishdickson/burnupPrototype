@@ -1,8 +1,13 @@
 % Burnup prototype
 
+%
+% note, this is a prototype
+%
+
 % clear any existing bits and bobs
 clear ; close all ; clc
 
+%-------------------------------------------------------------------------------
 % load the training set
 data = load('trainingSet1.txt');
 
@@ -48,3 +53,7 @@ mins_in_day = 60*7; % change this for your business
 % be realistic here - what percentage of that time will your team actually code/
 % QA/etc?
 work_factor = 0.7; % I would say that 0.7 may even be a little high
+
+% loop through vector and assign a number of mins for each task
+
+% sum that time, format it and output it

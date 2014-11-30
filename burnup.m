@@ -66,3 +66,13 @@ work_factor = 0.7; % I would say that 0.7 may even be a little high
 % loop through vector and assign a number of mins for each task
 
 % sum that time, format it and output it
+
+points = load('nextProject.txt');
+
+number_points = length(points);
+
+Points = [ones(number_points, 1), points];
+
+total_mins = sum(Points * theta);
+
+total = total_mins / mins_in_day

@@ -25,7 +25,7 @@ plotData(X, y);
 
 % OK, so remember to add a column of 1s
 m = length(y);
-X = [ones(m, 1), data(:, 1)];
+X = [ones(m, 1), X];
 
 % init theta
 theta = zeros(2, 1);
@@ -38,6 +38,6 @@ theta = normalEqn(X, y)
 
 % plot the linear fit
 hold on;
-plot(X(:,1), X*theta, '-') 
+plot(X(:,2), X*theta, '-') 
 legend('Training data', 'Linear regression') 
 hold off;

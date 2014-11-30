@@ -23,13 +23,17 @@ X = [ones(m, 1), X];
 theta = zeros(2, 1);
 
 % compute the initial cost
-computeCost(X, y, theta)
+[J, grad] = computeCost(X, y, theta, 1)
+
+lambda = 1;
+
+[theta] = trainLinearRegression([ones(m, 1) X], y, lambda);
 
 % use the normal equation
 theta = normalEqn(X, y)
 
 % plot the linear fit
 hold on;
-plot(X(:,2), X*theta, '-') 
-legend('Training data', 'Linear regression') 
+plot(X(:,2), X*theta, '-')
+legend('Training data', 'Linear regression')
 hold off;

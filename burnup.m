@@ -15,8 +15,11 @@ clear ; close all ; clc
 % load the training set
 data = load('trainingSet1.txt');
 
-X = data(:, 1);
-y = data(:, 2);
+X = data(:, 2);
+y = data(:, 1);
+
+% don't need this yet, but will need it for multiple features
+%[X, mu, sigma] = featureNormalize(X);
 
 plotData(X, y);
 
@@ -35,6 +38,6 @@ theta = normalEqn(X, y)
 
 % plot the linear fit
 hold on;
-plot(X(:,2), X*theta, '-') 
+plot(X(:,1), X*theta, '-') 
 legend('Training data', 'Linear regression') 
 hold off;

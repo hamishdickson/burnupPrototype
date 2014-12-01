@@ -77,7 +77,7 @@ total_mins = sum(Points * theta);
 
 total = total_mins / mins_in_day;
 
-fprintf('Projected total time: %d person days\n', total);
+fprintf('\nProjected total time: %d person days\n', total);
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
@@ -91,18 +91,14 @@ p = 8;
 % dial this up to stop overfitting
 lambda = 1;
 
+fprintf('\nStarting non-linear regression, p = 8, lambda = 1\n');
+
 % Map X onto Polynomial Features and Normalize
 X_poly = polyFeatures(data(:, 2), p);
 [X_poly, mu, sigma] = featureNormalize(X_poly);  % Normalize
 X_poly = [ones(m, 1), X_poly];                   % Add Ones
 
-fprintf('Normalized Training Example:\n');
-fprintf('  %f  \n', X_poly(1, :));
-
-fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
-
-[theta] = trainLinearRegression(X_poly, y, lambda);
+[theta] = trainLinearRegression(X_poly, y, lambda)
 
 figure(1);
 plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
@@ -127,4 +123,4 @@ total_mins = sum(points_poly * theta);
 
 total = total_mins / mins_in_day;
 
-fprintf('Projected total time via poly: %d person days\n', total);
+fprintf('\nProjected total time via poly: %d person days\n', total);

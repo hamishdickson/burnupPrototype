@@ -1,5 +1,7 @@
 % Burnup prototype
 
+% HWD 01/12/14 creation
+
 %
 % NOTE this is a prototype
 %

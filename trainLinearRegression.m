@@ -1,4 +1,17 @@
 function [theta] = trainLinearRegression(X, y, lambda)
+% X = features
+% y = outcomes (ie from supervied learning)
+% lambda = buffer to stop overfitting
+% theta = learned parameters
+
+%% find theta
+%
+% HWD 01/12/14
+%
+% this uses computeCost
+%
+% Note you probably shouldn't use this for very large data sets as it
+% involves inversing a matrix - instead you should use gradient decent
 
 % Initialize Theta
 initial_theta = zeros(size(X, 2), 1);

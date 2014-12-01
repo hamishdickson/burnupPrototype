@@ -1,6 +1,17 @@
 function [J, grad] = computeCost(X, y, theta, lambda)
+% X = features
+% y = outcomes (ie from supervied learning)
+% theta = learned parameters
+% lambda = scalar, buffer to stop overfitting
+% J = cost function
+% grad = gradient of the cost function (ie it's derivative)
 
-% work out the cost of the theta
+%% Compute cost and grad functions
+%
+% HWD 01/12/14
+%
+% Compute the cost function and grad function for a given theta
+%
 
 m = length(y);
 

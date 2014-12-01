@@ -1,4 +1,17 @@
 function [X_norm, mu, sigma] = featureNormalize(X)
+% X = features
+% X_norm = normalised features (same size as X)
+% mu = mean
+% sigma = std dev
+
+%% normalise the features
+%
+% HWD 01/12/14
+%
+% this is quite a straight forward process
+%
+% X_norm = (X - mu) / sigma
+%
 
 X_norm = X;
 

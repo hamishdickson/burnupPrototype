@@ -57,7 +57,7 @@ Right now, this isn't a true burn up chart - it gives you
 Important notes
 ===============
 
-As with all machine learning tools, the more data that can be fed to this the better.
+The more data that can be fed to this the better.
 
 See here for a more detailed explaination for what a burnup chart is http://www.clariostechnology.com/productivity/blog/whatisaburnupchart
 

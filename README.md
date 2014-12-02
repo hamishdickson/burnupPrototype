@@ -5,6 +5,23 @@ Note: this is a prototype, once I'm happy with this implementation I will create
 
 Octave implementation of a burnup chart using some simple machine learning.
 
+Using burnupPrototype
+=====================
+
+To use burnupPrototype, you should complete at least two steps
+
+1) replace the data in trainingSet.txt with your team's data from your last agile project. trainingSet.txt consists of pairs of <mins actually spent on story>, <story points>
+
+2) replace the data in nextProject.txt with a vector of story points for your next project. This does not need to be ordered. You should include all your story points.
+
+Once that is done, just run burnup from a matlab/octave session.
+
+Optionally, you should also
+
+3) change lambda to prevent overfitting. lambda can be found in burnup.m. By default this is set to 1.
+
+4) change p (polynomial order) to vary complexity of polynomial fit. p can be found in burnup.m. By default this is set to 8.
+
 Features
 ========
 
@@ -49,8 +66,10 @@ You should absolutely adjust the variables lambda and p in burnup.m - lambda act
 TODO
 ====
 
-** output sigma(1), sigma(2) and sigma(3)
+* output sigma(1), sigma(2) and sigma(3)
 
-** divide up the training set into a test and CV set
+* divide up the training set into a test and CV set
 
-** automatically pick p and lamdba
+* automatically pick p and lamdba
+
+* at the moment this only works with story points. At some point a decision needs to be made about what to do with tasks, bugs etc
